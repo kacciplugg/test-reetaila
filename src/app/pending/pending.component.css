@@ -1,0 +1,5 @@
+.bg-cover {
+    background-image: url(../../assets/hero_comingsoon.jpg);
+    background-size: cover;
+    height: 120vh;
+}

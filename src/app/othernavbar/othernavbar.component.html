@@ -1,0 +1,83 @@
+<header class="text-white body-font font-sans md:mx-28">
+  <div
+    class="hidden sm:inline-flex w-full flex-wrap bg-black bg-opacity-50 md:px-10 md:py-5 md:mt-6 rounded-[360px] flex-col md:flex-row items-center justify-between">
+    <div>
+      <a routerLink="/" class="flex title-font font-medium items-center mb-4 md:mb-0">
+        <img src="../../assets/reetaila_logo_white.png" class="max-w-40 h-auto" />
+      </a>
+    </div>
+    <div>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center font-medium text-2x1 justify-center">
+        <a routerLink="/solutions" class="mr-10 hover:text-gray-900">Solutions</a>
+        <a routerLink="/company" class="mr-10 hover:text-gray-900">Company</a>
+        <a routerLink="/company" class="mr-10 hover:text-gray-900">Pricing</a>
+        <a routerLink="/company" class="mr-10 hover:text-gray-900">Help</a>
+      </nav>
+    </div>
+    <div>
+      <a routerLink="/company" class="mr-10 hover:text-gray-900">Sign In</a>
+      <a routerLink="/solutions">
+        <button class="border-0 py-3 px-6 bg-[#2FAD66] rounded-lg text-white text-sm">
+          Get Started for free
+        </button></a>
+    </div>
+  </div>
+
+  <div class="w-full">
+    <div class="flex justify-between">
+      <a routerLink="/" class="md:hidden flex title-font font-medium items-center px-6 py-4 mb-4 md:mb-0">
+        <img src="../../assets/reetaila_logo.png" class="max-w-32 h-auto" />
+      </a>
+      <button class="inline-flex mr-6 mt-5 cursor-pointer text-1xl md:hidden" (click)="toggleMenu()">
+        <svg *ngIf="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="45" height="30"
+          viewBox="0 0 50 50">
+          <path
+            d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z">
+          </path>
+        </svg>
+
+        <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="45" height="30"
+          viewBox="0,0,256,256">
+          <g fill="#000000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="none" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path transform="scale(5.12,5.12)"
+              d="M25,23.5625l17.28125,-17.28125l1.4375,1.4375l-17.28125,17.28125l17.28125,17.28125l-1.4375,1.4375l-17.28125,-17.28125l-17.28125,17.28125l-1.4375,-1.4375l17.28125,-17.28125l-17.28125,-17.28125l1.4375,-1.4375z"
+              id="strokeMainSVG" stroke="#000000" stroke-linejoin="round"></path>
+            <g transform="scale(5.12,5.12)" stroke="none" stroke-linejoin="miter">
+              <path
+                d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
+    <nav class="md:hidden text-xl text-center mt-1 h-auto" [ngClass]="{ hidden: !isMenuOpen }" aria-label="main">
+      <ul>
+        <li class="py-2" (click)="toggleMenu()">
+          <a routerLink="/solutions" class="hover:opacity-90">Solutions</a>
+        </li>
+        <li class="py-2" (click)="toggleMenu()">
+          <a routerLink="/company" class="hover:opacity-90">Company</a>
+        </li>
+        <li class="py-2" (click)="toggleMenu()">
+          <a routerLink="/company" class="hover:opacity-90">Pricing</a>
+        </li>
+        <li class="py-2" (click)="toggleMenu()">
+          <a routerLink="/company" class="hover:opacity-90">Help</a>
+        </li>
+        <li class="py-2" (click)="toggleMenu()">
+          <a routerLink="/company" class="hover:opacity-90">Sign In</a>
+        </li>
+        <li class="py-2" (click)="toggleMenu()">
+          <a routerLink="/solutions">
+            <button class="w-full py-4 px-6 bg-[#1a2342] text-white text-sm">
+              Get Started for free
+            </button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
